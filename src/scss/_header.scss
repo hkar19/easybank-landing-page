@@ -1,0 +1,67 @@
+.header{
+  nav{
+    padding: 1.0625rem 1.5rem;
+    // border-width: 1px;
+    // border-style: solid;
+    // ;
+  }
+
+  &__logo{
+    img{
+      width: 8.8125rem;
+      height: 1.375rem;
+    }
+  }
+
+  &__menu{ // mobile menu
+    > span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background-color: $darkblue;
+
+      &:not(:last-child){
+        margin-bottom: 3px;
+      }
+    }
+  }
+
+  &__links{
+    a {
+      font-size: $font-sm;
+      position: relative;
+      color: $grayishblue;
+      transition: color 200ms;
+
+      &:not(:last-child){
+        margin-right: 32px;
+      }
+
+      &:hover{
+        color: $darkblue;
+
+        &::after{
+          opacity: 1;
+        }
+      }
+    }
+
+    a::after{
+      content: "";
+      position: absolute;
+      left:0;
+      right: 0;
+      bottom: -30px;
+      display: block;
+      // width: 100%;
+      height: 5px;
+      background: linear-gradient(to right, $limegreen, $brightcyan);
+      opacity: 0;
+      transition: opacity 300ms ease-in-out;
+    }
+  }
+
+  &__cta{
+
+  }
+}
